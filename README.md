@@ -5,7 +5,7 @@ Converter-App allows you to carry out a currency conversion operation. The opera
 
 Please don't hesitate to open an issue or pull request. You can also send me a message on [Twitter](https://twitter.com/KhaoulaKhemiri).
 
-![image](https://user-images.githubusercontent.com/99682033/161253474-41d543e5-c961-4f98-a3c3-95275807a981.png)
+
 
 
 
