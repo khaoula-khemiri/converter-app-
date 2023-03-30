@@ -1,0 +1,84 @@
+$breakpoints: (small: 576px,
+    medium: 768px,
+    large: 992px,
+    xlarge: 1200px);
+
+@mixin from($size) {
+    @media (max-width: #{$size}px) {
+        @content;
+    }
+}
+
+;
+
+.converter {
+    width: 500px;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(7.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    @include from(600) {
+        width: 70%;
+    }
+
+    .titre {
+        font-size: 25px;
+    }
+
+    input {
+        padding: 10px;
+        border-radius: 20px;
+        width: 400px;
+        font-size: 20px;
+        border: 1px solid gray;
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+
+        @include from(600) {
+            width: 90%;
+        }
+    }
+
+    input:focus {
+        outline: none;
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    }
+
+
+    .selectContainer {
+        display: flex;
+        gap: 35px;
+
+        @include from(600) {
+            flex-direction: column;
+        }
+
+        .selectText {
+            text-align: center;
+            padding: 15px;
+        }
+
+        .selectInput {
+            width: 200px;
+        }
+    }
+
+    .result {
+        font-size: 30px;
+        font-weight: 700;
+        color: white;
+
+        span {
+            color: greenyellow;
+            font-size: 25px;
+        }
+    }
+}
